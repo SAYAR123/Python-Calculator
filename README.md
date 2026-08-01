@@ -1,21 +1,12 @@
 # 🧮 Python Calculator
 
-A simple **Command-Line Calculator** built with **Python 3.10+** that performs basic arithmetic operations using the modern **`match-case`** statement. The calculator runs continuously until the user chooses to exit and safely handles division by zero.
+A simple and interactive **Command-Line Calculator** built using **Python 3.10+**. This calculator performs basic arithmetic operations using Python's modern **`match-case`** statement and provides a user-friendly menu to start or exit the application.
 
 ---
 
 ## 📖 Overview
 
-This project demonstrates the fundamentals of Python programming, including:
-
-- User input handling
-- Infinite loops
-- Pattern matching (`match-case`)
-- Conditional statements
-- Arithmetic operations
-- Formatted output using f-strings
-
-It is an excellent beginner project for learning Python basics.
+This project is designed for beginners to understand the fundamentals of Python programming. It demonstrates concepts such as loops, conditional statements, pattern matching, user input handling, and arithmetic operations in a clean and interactive manner.
 
 ---
 
@@ -25,10 +16,12 @@ It is an excellent beginner project for learning Python basics.
 - ➖ Subtraction
 - ✖️ Multiplication
 - ➗ Division
-- ⚠️ Division-by-zero protection
-- 🔁 Continuous calculations until the user exits
-- 🚪 Exit option (`e`)
-- 🆕 Built using Python's `match-case` statement
+- 🧮 Modulus (Remainder)
+- ⚠️ Division-by-zero handling
+- ❌ Invalid operator detection
+- 🔁 Perform unlimited calculations
+- 🚪 Start or exit from the welcome menu
+- 🆕 Uses Python 3.10 `match-case`
 
 ---
 
@@ -45,7 +38,7 @@ It is an excellent beginner project for learning Python basics.
 Python-Calculator/
 │
 ├── README.md
-└── calc.py
+└── calculator.py
 
 ```
 
@@ -57,7 +50,7 @@ Python-Calculator/
 
 - Python **3.10** or later
 
-Check your Python version:
+Check your installed version:
 
 ```bash
 python --version
@@ -71,15 +64,15 @@ python3 --version
 
 ---
 
-## ▶️ Running the Application
+## ▶️ Running the Program
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Python-Calculator.git
+git clone https://github.com/SAYAR123/Python-Calculator.git
 ```
 
-Navigate to the project directory:
+Navigate into the project directory:
 
 ```bash
 cd Python-Calculator
@@ -95,10 +88,43 @@ python calculator.py
 
 # 📸 Sample Output
 
-## Addition
+### Welcome Screen
 
 ```text
-Enter a number: 10
+Welcome to Python Calculator!
+
+Press c to continue
+Press e to exit
+
+c
+```
+
+---
+
+### Addition
+
+```text
+Enter a number: 15
+Enter another number: 8
+
+Operator list:
+    For addition press +
+    For subtraction press -
+    For multiplication press *
+    For division press /
+    For modulo press %
+
+Enter operator: +
+
+15.0 + 8.0 = 23.0
+```
+
+---
+
+### Multiplication
+
+```text
+Enter a number: 12
 Enter another number: 5
 
 Operator list:
@@ -106,19 +132,19 @@ Operator list:
     For subtraction press -
     For multiplication press *
     For division press /
-    For exiting press e
+    For modulo press %
 
-Enter operator: +
+Enter operator: *
 
-10.0+5.0 = 15.0
+12.0 * 5.0 = 60.0
 ```
 
 ---
 
-## Multiplication
+### Division
 
 ```text
-Enter a number: 12
+Enter a number: 18
 Enter another number: 6
 
 Operator list:
@@ -126,19 +152,19 @@ Operator list:
     For subtraction press -
     For multiplication press *
     For division press /
-    For exiting press e
+    For modulo press %
 
-Enter operator: *
+Enter operator: /
 
-12.0*6.0 = 72.0
+18.0 / 6.0 = 3.0
 ```
 
 ---
 
-## Division
+### Modulus
 
 ```text
-Enter a number: 25
+Enter a number: 17
 Enter another number: 5
 
 Operator list:
@@ -146,16 +172,16 @@ Operator list:
     For subtraction press -
     For multiplication press *
     For division press /
-    For exiting press e
+    For modulo press %
 
-Enter operator: /
+Enter operator: %
 
-25.0/5.0 = 5.0
+17.0 % 5.0 = 2.0
 ```
 
 ---
 
-## Division by Zero
+### Division by Zero
 
 ```text
 Enter a number: 20
@@ -166,77 +192,96 @@ Operator list:
     For subtraction press -
     For multiplication press *
     For division press /
-    For exiting press e
+    For modulo press %
 
 Enter operator: /
 
 Cannot divide by zero
 ```
 
-The calculator immediately starts the next calculation without displaying an incorrect result.
+The calculator returns to the main menu for the next calculation.
 
 ---
 
-## Exit
+### Invalid Operator
 
 ```text
-Enter operator: e
+Enter operator: ^
+
+Invalid operator
 ```
 
-The application exits successfully.
+The calculator returns to the main menu without crashing.
 
 ---
 
-# 🖼️ Output Screenshot
+### Exit
 
-<img width="1028" height="292" alt="image" src="https://github.com/user-attachments/assets/7f0544f5-2a2a-4aa4-b2c1-b336159f82aa" />
+```text
+Welcome to Python Calculator!
+
+Press c to continue
+Press e to exit
+
+e
+```
+
+The application terminates successfully.
+
+---
+
+## 🖼️ Screenshot
+
+Include a screenshot of the calculator running in your terminal.
+
+<img width="512" height="440" alt="image" src="https://github.com/user-attachments/assets/dfd84c27-f70a-470c-a45d-c8a9a7a376b5" />
 
 ---
 
 ## ⚙️ Supported Operations
 
-| Operator | Description |
-|----------|-------------|
+| Operator | Operation |
+|:--------:|-----------|
 | `+` | Addition |
 | `-` | Subtraction |
 | `*` | Multiplication |
 | `/` | Division |
-| `e` | Exit Program |
+| `%` | Modulus |
 
 ---
 
 ## 🧠 Concepts Demonstrated
 
-- Variables
+- Variables and Data Types
 - User Input (`input()`)
-- Type Casting
+- Type Casting (`float`)
 - Arithmetic Operators
 - Infinite Loops (`while`)
+- Conditional Statements (`if`)
 - Pattern Matching (`match-case`)
-- Conditional Statements (`if-else`)
-- Loop Control (`continue`, `break`)
+- Loop Control (`break`, `continue`)
 - Formatted Strings (`f-string`)
 
 ---
 
 ## 📌 Current Limitations
 
-- Does not validate non-numeric input.
-- Accepts only two operands at a time.
-- Invalid operators display an error message and continue execution.
+- Non-numeric inputs are not validated.
+- Only two operands are supported.
+- Unary operators not supported.
 
 ---
 
 ## 🔮 Future Enhancements
 
 - Input validation using `try-except`
-- Modulus (`%`) operation
+- Support decimal values correctly for both operands
 - Exponentiation (`**`)
-- Square root calculations
-- Scientific calculator functions
+- Square root and logarithmic functions
+- Scientific calculator mode
 - Calculation history
 - Graphical User Interface (Tkinter)
-- Web version using Flask or Streamlit
+- Web application using Flask or Streamlit
 
 ---
 
@@ -248,6 +293,6 @@ GitHub: https://github.com/SAYAR123
 
 ---
 
-## ⭐ Show Your Support
+## ⭐ Support
 
-If you found this project helpful, please consider giving it a ⭐ on GitHub!
+If you found this project useful, consider giving it a ⭐ on GitHub!
