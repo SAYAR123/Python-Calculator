@@ -9,7 +9,7 @@ while(1):
     if choice=='e': break
 
     a=float(input('Enter a number: '))
-    b=float(int(input('Enter another number: ')))
+    b=float(input('Enter another number: '))
 
     print('''
         Operator list:
