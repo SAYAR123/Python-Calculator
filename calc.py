@@ -2,6 +2,12 @@
 
 while(1):
 
+    print('Welcome to Python Calulator !\nPress c to continue\nPress e to exit')
+
+    choice = input()
+
+    if choice=='e': break
+
     a=float(input('Enter a number: '))
     b=float(int(input('Enter another number: ')))
 
@@ -11,7 +17,7 @@ while(1):
             For subtraction press -
             For multiplication press *
             For division press /
-            For exiting press e 
+            For modulo press %
     ''')
 
     op=input('Enter operator: ')
@@ -27,7 +33,9 @@ while(1):
                 print('Cannot divide by zero')
                 continue
             else: result = a/b
-        case 'e': break
-        case _: print('Invalid operator')
+        case '%': result = a%b
+        case _: 
+            print('Invalid operator')
+            continue
 
-    print(f'{a}{op}{b} = {result}')
+    print(f'{a} {op} {b} = {result}')
