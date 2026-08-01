@@ -22,7 +22,11 @@ while(1):
         case '+': result = a+b
         case '-': result = a-b
         case '*': result = a*b
-        case '/': result = a/b
+        case '/': 
+            if b==0: 
+                print('Cannot divide by zero')
+                continue
+            else: result = a/b
         case 'e': break
         case _: print('Invalid operator')
 
