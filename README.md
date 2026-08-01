@@ -44,8 +44,8 @@ It is an excellent beginner project for learning Python basics.
 ```
 Python-Calculator/
 │
-├── calc.py
-└── README.md
+├── README.md
+└── calc.py
 
 ```
 
